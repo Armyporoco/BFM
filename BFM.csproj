@@ -81,7 +81,6 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Assets\GameStart.cs" />
     <Compile Include="Assets\PQAssets\Query-Chan\Scripts\1.Locomotion\LocomotionGUI.cs" />
     <Compile Include="Assets\PQAssets\Query-Chan\Scripts\1.Locomotion\QueryLocomotionCamera.cs" />
     <Compile Include="Assets\PQAssets\Query-Chan\Scripts\1.Locomotion\QueryLocomotionController.cs" />
@@ -91,7 +90,13 @@
     <Compile Include="Assets\PQAssets\Query-Chan\Scripts\GUIControllerChristmas.cs" />
     <Compile Include="Assets\PQAssets\Query-Chan\Scripts\GUIControllerHalloween.cs" />
     <Compile Include="Assets\PQAssets\Query-Chan\Scripts\QueryMechanimController.cs" />
-    <Compile Include="Assets\RamdomMoving.cs" />
+    <Compile Include="Assets\Script\AI.cs" />
+    <Compile Include="Assets\Script\EnemyMaker.cs" />
+    <Compile Include="Assets\Script\EnemyMegane.cs" />
+    <Compile Include="Assets\Script\GameStart.cs" />
+    <Compile Include="Assets\Script\Items.cs" />
+    <Compile Include="Assets\Script\RamdomMoving.cs" />
+    <Compile Include="Assets\Script\Score.cs" />
     <Compile Include="Assets\ZRNAssets\005339_08932_25_14\Scripts\AmbientController.cs" />
     <Compile Include="Assets\ZRNAssets\005339_08932_25_14\Scripts\CameraController.cs" />
     <Compile Include="Assets\ZRNAssets\005339_08932_25_14\Scripts\FlyThroughController.cs" />
