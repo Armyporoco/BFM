@@ -21,55 +21,6 @@ public class AI : MonoBehaviour
     void Update()
     {
 
-        if (isDoubleTapStart)
-        {
-            doubleTapTime += Time.deltaTime;
-            if (doubleTapTime < 0.2f)
-            {
-                if (Input.GetMouseButtonDown(0))
-                {
-
-                    isDoubleTapStart = false;
-
-                    if (Player.GetComponent<Items>().yonjun == true)
-                    {
-                        foreach (GameObject enemy in enemies)
-                        {
-                            // 消す！
-                            Destroy(enemy);
-                        }
-                    }
-
-                    doubleTapTime = 0.0f;
-                }
-            }
-            else
-            {
-
-                if (Player.GetComponent<Items>().yonjun == true)
-                {
-                    Debug.Log("ok");
-                    foreach (GameObject enemy in enemies)
-                    {
-                        // 消す！
-                        Destroy(enemy);
-                    }
-                }
-
-                // reset
-                isDoubleTapStart = false;
-                doubleTapTime = 0.0f;
-            }
-        }
-        else
-        {
-            if (Input.GetMouseButtonDown(0))
-            {
-
-                isDoubleTapStart = true;
-            }
-        }
-
         Ray ray;
         RaycastHit hit;
         ray = Camera.main.ScreenPointToRay(Input.mousePosition);

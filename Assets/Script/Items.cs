@@ -8,6 +8,7 @@ public class Items : MonoBehaviour {
 
     public bool finish, yonjun, conan;
     public Image Yonjun, Conan;
+    public GameObject Arrow;
 
     // Use this for initialization
     void Start () {
@@ -43,6 +44,7 @@ public class Items : MonoBehaviour {
                 {
                     AudioClip clip = hit.collider.gameObject.GetComponent<AudioSource>().clip;
                     gameObject.GetComponent<AudioSource>().PlayOneShot(clip);
+                    Arrow.SetActive(true);
                     conan = true;
                     Conan.enabled = true;
                     Destroy(hit.collider.gameObject);

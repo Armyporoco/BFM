@@ -15,10 +15,10 @@ public class GameStart : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-        if (Input.GetMouseButtonDown(0)) {
-           SceneManager.LoadScene("Main");
-            Instantiate(Touch,Input.mousePosition,Quaternion.identity);
-    }
+        if (Input.GetMouseButtonDown(0))
+        {
+            SceneManager.LoadScene("Main");
+        }
         	
 	}
 }
