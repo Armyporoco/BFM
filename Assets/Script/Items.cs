@@ -9,8 +9,8 @@ public class Items : MonoBehaviour {
     public bool finish, yonjun, conan;
     public Image Yonjun, Conan;
 
-	// Use this for initialization
-	void Start () {
+    // Use this for initialization
+    void Start () {
         finish = false;
         yonjun = false;
         conan = false;
@@ -33,12 +33,16 @@ public class Items : MonoBehaviour {
                 }
                 if(hit.collider.gameObject.name == "Yonjun")
                 {
+                    AudioClip clip = hit.collider.gameObject.GetComponent<AudioSource>().clip;
+                    gameObject.GetComponent<AudioSource>().PlayOneShot(clip);
                     yonjun = true;
                     Yonjun.enabled = true;
                     Destroy(hit.collider.gameObject);
                 }
                 if(hit.collider.gameObject.name == "Conan")
                 {
+                    AudioClip clip = hit.collider.gameObject.GetComponent<AudioSource>().clip;
+                    gameObject.GetComponent<AudioSource>().PlayOneShot(clip);
                     conan = true;
                     Conan.enabled = true;
                     Destroy(hit.collider.gameObject);

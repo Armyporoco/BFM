@@ -6,6 +6,8 @@ using UnityEngine.SceneManagement;
 
 public class GameStart : MonoBehaviour {
 
+    public GameObject Touch;
+
 	// Use this for initialization
 	void Start () {
 		
@@ -14,8 +16,8 @@ public class GameStart : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
         if (Input.GetMouseButtonDown(0)) {
-            Debug.Log("ok");
            SceneManager.LoadScene("Main");
+            Instantiate(Touch,Input.mousePosition,Quaternion.identity);
     }
         	
 	}
