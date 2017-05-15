@@ -20,17 +20,11 @@ public class EnemyMaker : MonoBehaviour {
 
         timer += Time.deltaTime;
 
-        if (_isRendered)
+        if (timer >= 5.0f)
         {
-            if (timer >= 5)
-            {
-                Instantiate(EnemyMegane, this.transform.position, Quaternion.identity);
-
-                timer = 0;
-            }
+            Instantiate(EnemyMegane, this.transform.position, Quaternion.identity);
+            timer = 0.0f;
         }
-
-        _isRendered = false;
 	}
 
     private void OnWillRenderObject()

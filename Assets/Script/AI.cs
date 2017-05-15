@@ -39,41 +39,9 @@ public class AI : MonoBehaviour
                 touchEndPos = new Vector3(Input.mousePosition.x, Input.mousePosition.y, Input.mousePosition.z);
             }
 
-            /*if (Swaip() == true)
-            {
-                if (Player.GetComponent<Items>().yonjun == true)
-                {
-                    foreach (GameObject enemy in enemies)
-                    {
-                        // 消す！
-                        Destroy(enemy);
-                    }
-                }
-            }
-            else
-            {
-                transform.position = direction;
-                Ring.transform.position = direction;
-               
-            }*/
 
         }
     }
-
-   bool Swaip() {
-        float directionX = touchEndPos.x - touchStartPos.x;
-        float directionY = touchEndPos.y - touchStartPos.y;
-
-        if(Mathf.Abs(directionY) < 0.5f && Mathf.Abs(directionX) < 0.5f)
-        {
-            return false;
-        }
-        else
-        {
-            return true;
-        }
-    }
-
 
 }
 

@@ -6,6 +6,7 @@ public class SelectedBFM : MonoBehaviour {
 
     public static SelectedBFM instance = null;
     public Sprite BFM_sprite;
+    public GameObject SceneLoading;
 
     void Awake()
     {
@@ -27,8 +28,8 @@ public class SelectedBFM : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-        if (gameObject.GetComponent<SceneLoading>().Selected == true) {
-            BFM_sprite = gameObject.GetComponent<SceneLoading>().image.sprite;
+        if (SceneLoading != null && SceneLoading.gameObject.GetComponent<SceneLoading>().Selected == true) {
+            BFM_sprite = SceneLoading.gameObject.GetComponent<SceneLoading>().image.sprite;
                 }
 	}
 }

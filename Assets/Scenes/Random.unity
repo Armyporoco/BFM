@@ -241,6 +241,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   BFM_sprite: {fileID: 0}
+  SceneLoading: {fileID: 200388560}
 --- !u!4 &504528542
 Transform:
   m_ObjectHideFlags: 0
