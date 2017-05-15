@@ -19,6 +19,6 @@ public class Score : MonoBehaviour {
 	void Update () {
         timer += Time.deltaTime;
         score = denemy * 2.5f + 1000000/timer;
-        Scoretext.text = "Score:" + score.ToString();
+        Scoretext.text = score.ToString();
 	}
 }
