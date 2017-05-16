@@ -5,24 +5,21 @@ using UnityEngine;
 public class AI : MonoBehaviour
 {
     public float timer;
-    public bool timerstart;
     public GameObject[] enemies;
-    public　GameObject Player;
+    public　GameObject Player,Score;
     public Vector3 direction,touchStartPos,touchEndPos;
     public float ts_x, ts_y, te_x, te_y;
 
     // Use this for initialization
     void Start()
-    { 
-        enemies = GameObject.FindGameObjectsWithTag("enemy");
-
+    {
     }
 
     // Update is called once per frame
     void Update()
     {
 
-        Ray ray;
+        Ray ray,attack;
         RaycastHit hit;
         ray = Camera.main.ScreenPointToRay(Input.mousePosition);
 
@@ -48,23 +45,32 @@ public class AI : MonoBehaviour
 
             if (timer >= 0.2f)
             {
-                if (Vector2.Distance(touchStartPos,touchEndPos) >= 15.0f)
+                if (Vector2.Distance(touchStartPos, touchEndPos) >= 15.0f)
                 {
-                    Vector3 center = new Vector3((touchStartPos.x + touchEndPos.x) / 2, (touchStartPos.y + touchEndPos.y) / 2, Camera.main.transform.position.z);
-                    Vector3 extends = new Vector3(System.Math.Abs(touchStartPos.x - touchEndPos.x)/2, System.Math.Abs(touchStartPos.y - touchEndPos.y)/2, Mathf.Infinity);
-                    if (Physics.BoxCast(center, extends, Camera.main.transform.forward,out hit,Quaternion.identity,Mathf.Infinity))
+                    if (Player.GetComponent<Items>().yonjun == true)
                     {
-                        Debug.Log("Ray");
-                        if(hit.collider.tag == "enemy")
-                        {
-                            Destroy(hit.collider.gameObject);
-                        }
+                        SpecialAttack();
                     }
-                    Debug.Log("swaip");
+                    else
+                    {
+                        for (int i = 0; i < 10; i++)
+                        {
+                            attack = Camera.main.ScreenPointToRay(Vector3.Lerp(touchStartPos, touchEndPos, i / 10.0f));
+                            if ((Physics.Raycast(attack, out hit, Mathf.Infinity)))
+                            {
+                                if (hit.collider.tag == "enemy")
+                                {
+                                    hit.collider.GetComponent<EnemyMoving>().Die();
+                                }
 
+                            }
+
+                        }
+
+                    }
                 }
                 else
-                { 
+                {
                     transform.position = direction;
 
                 }
@@ -73,6 +79,19 @@ public class AI : MonoBehaviour
             timer = 0.0f;
         }
 
+    }
+
+    public void SpecialAttack()
+    {
+        enemies = GameObject.FindGameObjectsWithTag("enemy");
+
+        foreach (GameObject enemy in enemies)
+        {
+            if (Vector3.Distance(Player.transform.position, gameObject.transform.position) <= 5.0f)
+            {
+                enemy.gameObject.GetComponent<EnemyMoving>().Die();
+            }
+        }
     }
 
 }

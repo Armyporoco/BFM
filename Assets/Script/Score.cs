@@ -18,7 +18,7 @@ public class Score : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
         timer += Time.deltaTime;
-        score = denemy * 2.5f + 1000000/timer;
+        score = denemy * 2.5f;
         Scoretext.text = score.ToString();
-	}
+    }
 }
