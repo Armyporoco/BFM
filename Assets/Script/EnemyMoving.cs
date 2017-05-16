@@ -8,36 +8,28 @@ public class EnemyMoving : MonoBehaviour {
     UnityEngine.AI.NavMeshAgent agent;
     GameObject player;
     GameObject Score;
-    public bool _isRendered;
-    public string MAIN_CAMERA_TAG_NAME = "MainCamera";
 
     // Use this for initialization
     void Start () {
         agent = GetComponent<UnityEngine.AI.NavMeshAgent>();
         player = GameObject.FindGameObjectWithTag("Player");
-        Score = GameObject.Find("Score(can)");
+        Score = GameObject.Find("Score_c");
 	}
 	
 	// Update is called once per frame
 	void Update () {
         agent.SetDestination(player.transform.position);
 
-        if(_isRendered)
-        { 
-            if(Input.GetMouseButtonDown(0) && player.GetComponent<Items>().yonjun == true) {
-                Debug.Log("ok!");
-                Destroy(this);
+        if (Vector3.Distance(player.transform.position, gameObject.transform.position) <= 5.0f)
+        {
+            if (Input.GetMouseButtonDown(1) && player.GetComponent<Items>().yonjun == true)
+            {
+                Destroy(this.gameObject);
+                Score.GetComponent<Score>().denemy += 1f;
             }
         }
+        
 
-    }
-
-    private void OnWillRenderObject()
-    {
-        if (Camera.current.tag == MAIN_CAMERA_TAG_NAME)
-        {
-            _isRendered = true;
-        }
     }
 
     private void OnCollisionEnter(Collision collision)

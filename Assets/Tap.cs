@@ -9,7 +9,7 @@ public class Tap : MonoBehaviour {
 
     public enum EventType { None,Pressed,Click,LongPress,Drag}
 
-    public float CheckDistance = 30;
+    public float CheckDistance = 3;
     public float CheckTime = 0.3f;
 
     EventType type;
@@ -23,6 +23,7 @@ public class Tap : MonoBehaviour {
     void SetType(EventType type)
     {
         this.type = type;
+        Debug.Log(type);
     }
 
     public void OnPointerDown(PointerEventData e)

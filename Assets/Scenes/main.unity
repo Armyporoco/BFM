@@ -259,7 +259,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   timer: 0
-  EnemyMegane: {fileID: 1674806233727986, guid: 68fe05062119de64dab64213869df2b0,
+  EnemyMegane: {fileID: 1969593990639534, guid: 68fe05062119de64dab64213869df2b0,
     type: 2}
   _isRendered: 0
   MAIN_CAMERA_TAG_NAME: MainCamera
@@ -1431,93 +1431,6 @@ Transform:
   m_Father: {fileID: 702169476}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &486490813
-GameObject:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  serializedVersion: 5
-  m_Component:
-  - component: {fileID: 486490818}
-  - component: {fileID: 486490817}
-  - component: {fileID: 486490816}
-  - component: {fileID: 486490815}
-  - component: {fileID: 486490814}
-  m_Layer: 0
-  m_Name: Main Camera
-  m_TagString: MainCamera
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 0
---- !u!81 &486490814
-AudioListener:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 486490813}
-  m_Enabled: 1
---- !u!124 &486490815
-Behaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 486490813}
-  m_Enabled: 1
---- !u!92 &486490816
-Behaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 486490813}
-  m_Enabled: 1
---- !u!20 &486490817
-Camera:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 486490813}
-  m_Enabled: 1
-  serializedVersion: 2
-  m_ClearFlags: 1
-  m_BackGroundColor: {r: 0.19215687, g: 0.3019608, b: 0.4745098, a: 0}
-  m_NormalizedViewPortRect:
-    serializedVersion: 2
-    x: 0
-    y: 0
-    width: 1
-    height: 1
-  near clip plane: 0.3
-  far clip plane: 1000
-  field of view: 60
-  orthographic: 0
-  orthographic size: 5
-  m_Depth: -1
-  m_CullingMask:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_RenderingPath: -1
-  m_TargetTexture: {fileID: 0}
-  m_TargetDisplay: 0
-  m_TargetEye: 3
-  m_HDR: 0
-  m_OcclusionCulling: 1
-  m_StereoConvergence: 10
-  m_StereoSeparation: 0.022
-  m_StereoMirrorMode: 0
---- !u!4 &486490818
-Transform:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 486490813}
-  m_LocalRotation: {x: 0.061358027, y: 0.09473056, z: 0.005849962, w: 0.99359304}
-  m_LocalPosition: {x: 0, y: 3.1, z: -4.92}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 1821400370}
-  m_RootOrder: 2
-  m_LocalEulerAnglesHint: {x: 6.9400005, y: 10.974001, z: 1.342}
 --- !u!1 &516917591
 GameObject:
   m_ObjectHideFlags: 0
@@ -1970,7 +1883,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400002, guid: baec086904791744185aaa07a6cf55c2, type: 2}
       propertyPath: m_LocalPosition.y
-      value: 2.48
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 100000, guid: baec086904791744185aaa07a6cf55c2, type: 2}
       propertyPath: m_Icon
@@ -2130,7 +2043,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   timer: 0
-  EnemyMegane: {fileID: 1674806233727986, guid: 68fe05062119de64dab64213869df2b0,
+  EnemyMegane: {fileID: 1969593990639534, guid: 68fe05062119de64dab64213869df2b0,
     type: 2}
   _isRendered: 0
   MAIN_CAMERA_TAG_NAME: MainCamera
@@ -2244,6 +2157,7 @@ GameObject:
   - component: {fileID: 781574204}
   - component: {fileID: 781574203}
   - component: {fileID: 781574209}
+  - component: {fileID: 781574210}
   m_Layer: 0
   m_Name: Conan
   m_TagString: Untagged
@@ -2428,6 +2342,17 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 0
+--- !u!114 &781574210
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 781574202}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 919e8f4d76f5b54459c42fa4bf27b1c0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &811728569 stripped
 GameObject:
   m_PrefabParentObject: {fileID: 105464, guid: c925872ce3bfa384589bf34b953d5a65, type: 3}
@@ -3594,7 +3519,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   timer: 0
-  EnemyMegane: {fileID: 1674806233727986, guid: 68fe05062119de64dab64213869df2b0,
+  EnemyMegane: {fileID: 1969593990639534, guid: 68fe05062119de64dab64213869df2b0,
     type: 2}
   _isRendered: 0
   MAIN_CAMERA_TAG_NAME: MainCamera
@@ -15855,6 +15780,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2b8365b9833535949896d9c2fcc2e359, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  timer: 0
+  timerstart: 0
   enemies: []
   Player: {fileID: 1821400364}
   direction: {x: 0, y: 0, z: 0}
@@ -15872,7 +15799,7 @@ GameObject:
   - component: {fileID: 1751887172}
   - component: {fileID: 1751887171}
   m_Layer: 5
-  m_Name: Score
+  m_Name: Score_c
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -16295,11 +16222,37 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   finish: 0
-  yonjun: 0
+  yonjun: 1
   conan: 0
   Yonjun: {fileID: 27924799}
   Conan: {fileID: 647982938}
   Arrow: {fileID: 2019588844}
+--- !u!114 &1821400377
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1821400364}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 43ad3147db9258f408a21f79e01926d9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CheckDistance: 30
+  CheckTime: 0.3
+--- !u!114 &1821400378
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1821400364}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 43ad3147db9258f408a21f79e01926d9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CheckDistance: 30
+  CheckTime: 0.3
 --- !u!1 &1849168216
 GameObject:
   m_ObjectHideFlags: 0
@@ -16333,7 +16286,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   timer: 0
-  EnemyMegane: {fileID: 1674806233727986, guid: 68fe05062119de64dab64213869df2b0,
+  EnemyMegane: {fileID: 1969593990639534, guid: 68fe05062119de64dab64213869df2b0,
     type: 2}
   _isRendered: 0
   MAIN_CAMERA_TAG_NAME: MainCamera
@@ -16600,7 +16553,7 @@ Transform:
   m_Children:
   - {fileID: 1091567976}
   m_Father: {fileID: 1821400370}
-  m_RootOrder: 3
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &2019588846
 MonoBehaviour:
@@ -16647,7 +16600,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   timer: 0
-  EnemyMegane: {fileID: 1674806233727986, guid: 68fe05062119de64dab64213869df2b0,
+  EnemyMegane: {fileID: 1969593990639534, guid: 68fe05062119de64dab64213869df2b0,
     type: 2}
   _isRendered: 0
   MAIN_CAMERA_TAG_NAME: MainCamera
@@ -16758,7 +16711,7 @@ GameObject:
   - component: {fileID: 2091916478}
   - component: {fileID: 2091916477}
   m_Layer: 5
-  m_Name: Score(can)
+  m_Name: Score
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

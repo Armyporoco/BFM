@@ -20,7 +20,7 @@ public class EnemyMaker : MonoBehaviour {
 
         timer += Time.deltaTime;
 
-        if (timer >= 5.0f)
+        if (timer >= 10.0f)
         {
             Instantiate(EnemyMegane, this.transform.position, Quaternion.identity);
             timer = 0.0f;
