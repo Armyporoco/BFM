@@ -6,7 +6,8 @@ using UnityEngine.SceneManagement;
 
 public class GameStart : MonoBehaviour {
 
-    public GameObject Touch;
+    public GameObject[] canvas = new GameObject[4];
+    int i;
 
 	// Use this for initialization
 	void Start () {
@@ -17,7 +18,16 @@ public class GameStart : MonoBehaviour {
 	void Update () {
         if (Input.GetMouseButtonDown(0))
         {
-            SceneManager.LoadScene("Random");
+            if (i < 3)
+            {
+                canvas[i + 1].SetActive(true);
+                canvas[i].SetActive(false);
+            }
+            if (i == 3)
+            {
+                SceneManager.LoadScene("Random");
+            }
+            i++;
         }
         	
 	}
