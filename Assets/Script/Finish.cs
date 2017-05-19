@@ -1,8 +1,9 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
-public class EnemyMegane : MonoBehaviour {
+public class Finish : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
@@ -14,10 +15,8 @@ public class EnemyMegane : MonoBehaviour {
 		
 	}
 
-    private void OnCollisionEnter(Collision collision)
-    {
-        if (collision.gameObject.tag == "Player") {
-            Debug.Log("damage");
-        }
+   public void OnButtonClick() {
+        SceneManager.UnloadSceneAsync("Random");
+        SceneManager.LoadScene("Ramdom");
     }
 }

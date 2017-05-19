@@ -9,7 +9,7 @@ public class SceneLoading : MonoBehaviour {
     private AsyncOperation async;
     public Image image;
     public Text BFMName, Tap;
-    public Sprite[] sprite = new Sprite[5];
+    public Sprite[] sprite = new Sprite[7];
     public static SceneLoading instance = null; 
     public bool Selected = false;
     public int index;
@@ -55,6 +55,7 @@ public class SceneLoading : MonoBehaviour {
         {
             index = Random.Range(0, sprite.Length);
             image.sprite = sprite[index];
+            BFMName.text = image.sprite.name;
         }
 
         if (Input.GetMouseButtonDown(0) && Selected == false)
@@ -62,6 +63,7 @@ public class SceneLoading : MonoBehaviour {
             Selected = true;
             image.sprite = sprite[index];
             BFMName.text = image.sprite.name;
+            SelectedBFM.instance.SetIndex(index);
             Tap.text = "Tap to Start";
         }
 

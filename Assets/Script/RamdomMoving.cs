@@ -3,15 +3,22 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
 
-public class RamdomMoving : MonoBehaviour {
+public class RandomMoving: MonoBehaviour {
 
-    public GameObject[] points;
+     GameObject[] points;
+     GameObject[] enemies = new GameObject[7];
     float timer,speed;
     NavMeshAgent agent;
     Vector3 destination;
 
-	// Use this for initialization
-	void Start () {
+    private void Awake()
+    {
+        enemies = Resources.LoadAll<GameObject>("Enemys");
+
+    }
+
+    // Use this for initialization
+    void Start () {
         timer = 0.0f;
         agent = GetComponent<NavMeshAgent>();
         points = GameObject.FindGameObjectsWithTag("point");

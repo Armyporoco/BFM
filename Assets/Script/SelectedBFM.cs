@@ -5,8 +5,8 @@ using UnityEngine;
 public class SelectedBFM : MonoBehaviour {
 
     public static SelectedBFM instance = null;
-    public Sprite BFM_sprite;
-    public GameObject SceneLoading;
+    public int index;
+   // public GameObject SceneLoading;
 
     void Awake()
     {
@@ -25,11 +25,18 @@ public class SelectedBFM : MonoBehaviour {
 	void Start () {
 		
 	}
+
+
+
+    public void SetIndex(int index)
+    {
+        this.index = index;
+    }
 	
 	// Update is called once per frame
 	void Update () {
-        if (SceneLoading != null && SceneLoading.gameObject.GetComponent<SceneLoading>().Selected == true) {
-            BFM_sprite = SceneLoading.gameObject.GetComponent<SceneLoading>().image.sprite;
+       // if (SceneLoading != null && SceneLoading.gameObject.GetComponent<SceneLoading>().Selected == true) {
+           // index = SceneLoading.gameObject.GetComponent<SceneLoading>().index;
                 }
-	}
+	
 }

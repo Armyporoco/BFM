@@ -209,8 +209,13 @@ MonoBehaviour:
   BFMName: {fileID: 1669560382}
   Tap: {fileID: 101428271}
   sprite:
-  - {fileID: 21300000, guid: b5b559af1298c544dbc4e404ac25ad6f, type: 3}
-  - {fileID: 21300000, guid: 61a5e18da9997774098e89467c979dd7, type: 3}
+  - {fileID: 21300000, guid: 8143305b0595f4549a2fd581ed1f9923, type: 3}
+  - {fileID: 21300000, guid: 62ac949f119ca0e419f7389d4559d149, type: 3}
+  - {fileID: 21300000, guid: 6308782806afe4147814e95864b6f9f5, type: 3}
+  - {fileID: 21300000, guid: 838c194d5c3c38a4995c3b22c5fdcd4e, type: 3}
+  - {fileID: 21300000, guid: f8cfdff778ef1c94597542fef2bc4d5f, type: 3}
+  - {fileID: 21300000, guid: 9884ed0e75bfbc24798de14d9c4ec3e5, type: 3}
+  - {fileID: 21300000, guid: 960c68a007e96054080955fafe85f7f8, type: 3}
   Selected: 0
   index: 0
 --- !u!1 &504528540
@@ -287,8 +292,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 100, y: 100}
+  m_AnchoredPosition: {x: 0, y: 39}
+  m_SizeDelta: {x: 200, y: 200}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &799581891
 MonoBehaviour:
